@@ -13,13 +13,13 @@ class Productos(models.Model):
         string='Marca',
         required=False)
     ubicacion_id = fields.Many2one(
-        comodel_name='pos_product_reference.ubicacion_stock',
+        comodel_name='ubicacion.stock',
         string='Ubicación Stock',
         required=False)
 
 
 class UbicacionStock(models.Model):
-    _name = 'pos_product_reference.ubicacion_stock'
+    _name = 'ubicacion.stock'
 
     name = fields.Char(string="Ubicación Stock")
 
