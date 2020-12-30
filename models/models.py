@@ -12,6 +12,16 @@ class Productos(models.Model):
         comodel_name='marcas.filtros',
         string='Marca',
         required=False)
+    ubicacion_id = fields.Many2one(
+        comodel_name='pos_product_reference.ubicacion_stock',
+        string='Ubicación Stock',
+        required=False)
+
+
+class UbicacionStock(models.Model):
+    _name = 'pos_product_reference.ubicacion_stock'
+
+    name = fields.Char(string="Ubicación Stock")
 
 
 class MarcasFiltros(models.Model):

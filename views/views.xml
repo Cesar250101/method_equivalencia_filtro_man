@@ -13,6 +13,7 @@
                     <group>
                         <field name="codigo_man" />
                         <field name="marca_filtro_id" />
+                        <field name="ubicacion_id" />
                     </group>
                 </group>
             </xpath>
